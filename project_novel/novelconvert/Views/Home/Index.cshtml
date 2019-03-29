@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="near_head">
+    <div class="recommand-comic">
+         <h3>RECOMMEND</h3>
+         <div class="recommand-novel-detail">
+
+         </div>
+         <h4>THE WORLD OF THE CHAMPION</h4>
+         <p>Long long time ago, one porn star</p>
+    </div>
+    <div class="new-chapter">
+        <div class="new-chapter-board">
+            <h3>
+                <a href="#">
+                    MONEY
+                </a>
+                
+            </h3>
+            <p>
+                6145 viewer
+            </p>
+            <span>
+                This is a small story about money, how can you give the money to me
+            </span>
+        </div>
+        <div class="new-chapter-board">
+            <h3>
+                <a href="#">BUSINESS</a>
+                
+            </h3>
+            <p>
+                123 viewer
+            </p>
+            <span>
+                This is a small story about money, how can you give the money to me
+            </span>
+        </div>
+        <div class="new-chapter-board">
+            <h3>
+                <a href="#">INDUSTRY</a>
+                
+            </h3>
+            <p>
+                615 viewer
+            </p>
+            <span>
+                This is a small story about money, how can you give the money to me
+            </span>
+        </div>
+        <div class="new-chapter-board">
+            <h3>
+                <a href="#">HOME</a>
+                
+            </h3>
+            <p>
+                6145 viewer
+            </p>
+            <span>
+                This is a small story about money, how can you give the money to me
+            </span>
+        </div>
+        <div class="new-chapter-board">
+            <h3>
+                <a href="#">FUCKER</a>
+                
+            </h3>
+            <p>
+                6145 viewer
+            </p>
+            <span>
+                This is a small story about money, how can you give the money to me
+            </span>
+        </div>
+        <div class="new-chapter-board">
+            <h3>
+                <a href="#">GIRL</a>
+                
+            </h3>
+            <p>
+                6145 viewer
+            </p>
+            <span>
+                This is a small story about money, how can you give the money to me
+            </span>
+        </div>
+    </div>
+    <div class="top-novel">
+        <h3>TOP NOVEL</h3>
+        <table>
+            @for (int i = 1; i < 11; i++)
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>Name of the first novel</td>
+                    <td><span class="badge badge-light">@(i * 10) votes</span></td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
