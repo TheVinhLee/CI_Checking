@@ -110,3 +110,22 @@
     color:#ff920b;
     text-align:left;
 }
+
+.table{
+    height:90%;
+}
+
+.table span{
+     float:right;
+}
+
+.novel-reading{
+    width: 33%;
+    min-height:200px;
+    max-height: 600px;
+}
+
+.novel-reading h3{
+    color:#ff920b;
+    text-align:left;
+}
