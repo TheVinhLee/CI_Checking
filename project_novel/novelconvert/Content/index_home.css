@@ -11,7 +11,8 @@
     margin-top:300px;
     margin-left:20px;
     margin-right:20px;
-    min-height:1500px;
+    min-height:2000px;
+    max-height:3000px;
     padding:1%;
 }
 
@@ -46,6 +47,8 @@
     background-size:20%;
     padding:1%;
     text-align:center;
+
+    margin-bottom:40px;
 }
 
 .recommand-comic h3{
@@ -123,9 +126,42 @@
     width: 33%;
     min-height:200px;
     max-height: 600px;
+    padding-left:30px;
+
 }
 
 .novel-reading h3{
     color:#ff920b;
     text-align:left;
+}
+
+.novel-reading h3 span{
+    float:right;
+    color:#808080;
+    text-align:left;
+    font-size:20px;
+    font-style:italic;
+}
+
+.novel-reading h3 span a{
+    text-decoration:none;
+}
+
+.img-rounded{
+    width:100%;
+}
+
+.novel-reading table tr td{
+    width:10%;
+}
+
+.new-novel{
+    float:right;
+    width:64%;
+    padding-right:1%;
+    margin-top:-3.5%;
+}
+
+.new-novel table tr td{
+    width:10%;
 }
