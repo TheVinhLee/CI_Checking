@@ -1,5 +1,6 @@
-﻿
+﻿@model List<novelconvert.Models.NovelModel>
 @{
+    
     ViewBag.Title = "Home Page";
 }
 
@@ -13,15 +14,15 @@
          <p>Long long time ago, one porn star</p>
     </div>
     <div class="new-chapter">
+
         <div class="new-chapter-board">
             <h3>
                 <a href="#">
-                    MONEY
+                    @Model[0].Name
                 </a>
-                
             </h3>
             <p>
-                6145 viewer
+                @Model[0].Viewer viewer
             </p>
             <span>
                 This is a small story about money, how can you give the money to me
@@ -29,11 +30,10 @@
         </div>
         <div class="new-chapter-board">
             <h3>
-                <a href="#">BUSINESS</a>
-                
+                <a href="#">@Model[1].Name</a>
             </h3>
             <p>
-                123 viewer
+                @Model[1].Viewer viewer
             </p>
             <span>
                 This is a small story about money, how can you give the money to me

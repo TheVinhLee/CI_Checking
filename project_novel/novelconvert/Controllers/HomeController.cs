@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using novelconvert.Models;
+using MySql.Data;
 
 namespace novelconvert.Controllers
 {
@@ -10,7 +9,11 @@ namespace novelconvert.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            DBModel db = new DBModel();
+
+            List<NovelModel> nv = db.AllNovel();
+
+            return View(nv);
         }
 
         public ActionResult About()
