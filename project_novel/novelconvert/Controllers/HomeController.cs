@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using novelconvert.Models;
-using MySql.Data;
+//using MySql.Data;
 
 namespace novelconvert.Controllers
 {
@@ -9,11 +9,11 @@ namespace novelconvert.Controllers
     {
         public ActionResult Index()
         {
-            DBModel db = new DBModel();
+            //DBModel db = new DBModel();
 
-            List<NovelModel> nv = db.AllNovel();
+            //List<NovelModel> nv = db.AllNovel();
 
-            return View(nv);
+            return View();
         }
 
         public ActionResult About()
@@ -27,6 +27,11 @@ namespace novelconvert.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult Register()
+        {
             return View();
         }
     }
