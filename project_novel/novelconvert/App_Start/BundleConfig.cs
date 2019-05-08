@@ -27,7 +27,10 @@ namespace novelconvert
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/index_home.css"));
+                      "~/Content/index_home.css",
+                      "~/Content/style.css",
+                      "~/Content/demo.css",
+                      "~/Content/animate-custom.css"));
         }
     }
 }
