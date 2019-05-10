@@ -1,92 +1,36 @@
 ﻿@model List<novelconvert.Models.NovelModel>
 @{
-    
     ViewBag.Title = "Home Page";
 }
 
 <div class="near_head">
     <div class="recommand-comic">
-         <h3>RECOMMEND</h3>
-         <div class="recommand-novel-detail">
+        <h3>RECOMMEND</h3>
+        <div class="recommand-novel-detail">
 
-         </div>
-         <h4>THE WORLD OF THE CHAMPION</h4>
-         <p>Long long time ago, one porn star</p>
+        </div>
+        <h4>THE WORLD OF THE CHAMPION</h4>
+        <p>Long long time ago, one porn star</p>
     </div>
     <div class="new-chapter">
+        @for (int i = 0; i < 6; i++)
+        {
+            <div class="new-chapter-board">
+                <h3>
+                    <a href="#">
+                        @Model[i].Name
+                    </a>
 
-        <div class="new-chapter-board">
-            <h3>
-                <a href="#">
-                    @Model[0].Name
-                </a>
-            </h3>
-            <p>
-                @Model[0].Viewer viewer
-            </p>
-            <span>
-                This is a small story about money, how can you give the money to me
-            </span>
-        </div>
-        <div class="new-chapter-board">
-            <h3>
-                <a href="#">@Model[1].Name</a>
-            </h3>
-            <p>
-                @Model[1].Viewer viewer
-            </p>
-            <span>
-                This is a small story about money, how can you give the money to me
-            </span>
-        </div>
-        <div class="new-chapter-board">
-            <h3>
-                <a href="#">INDUSTRY</a>
-                
-            </h3>
-            <p>
-                615 viewer
-            </p>
-            <span>
-                This is a small story about money, how can you give the money to me
-            </span>
-        </div>
-        <div class="new-chapter-board">
-            <h3>
-                <a href="#">HOME</a>
-                
-            </h3>
-            <p>
-                6145 viewer
-            </p>
-            <span>
-                This is a small story about money, how can you give the money to me
-            </span>
-        </div>
-        <div class="new-chapter-board">
-            <h3>
-                <a href="#">GAME</a>
-                
-            </h3>
-            <p>
-                6145 viewer
-            </p>
-            <span>
-                This is a small story about money, how can you give the money to me
-            </span>
-        </div>
-        <div class="new-chapter-board">
-            <h3>
-                <a href="#">GIRL</a>
-                
-            </h3>
-            <p>
-                6145 viewer
-            </p>
-            <span>
-                This is a small story about money, how can you give the money to me
-            </span>
-        </div>
+                </h3>
+                <p>
+                    @Model[i].Viewer viewer
+                </p>
+                <span>
+                    This is a small story about money, how can you give the money to me
+                </span>
+            </div>
+        }
+
     </div>
     <div class="top-novel">
         <h3>TOP NOVEL</h3>
@@ -95,8 +39,8 @@
             {
                 <tr>
                     <td>@i</td>
-                    <td>Name of the first novel</td>
-                    <td><span class="badge badge-light">@(i * 10) votes</span></td>
+                    <td>@Model[i].Name</td>
+                    <td><span class="badge badge-light">@Model[i].Voting votes</span></td>
                 </tr>
             }
         </table>
@@ -108,8 +52,8 @@
             @for (int i = 1; i < 11; i++)
             {
                 <tr>
-                    <td><img src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-rounded" alt="Cinque Terre"></td>
-                    <td>Name of the first novel</td>
+                    <td><img src="@Model[i].Image_link" class="img-rounded" alt="Cinque Terre"></td>
+                    <td>@Model[i].Name</td>
                     <td style="text-align:right">Continue</td>
                 </tr>
             }
@@ -122,11 +66,11 @@
             @for (int i = 1; i < 11; i++)
             {
                 <tr>
-                    <td><img src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-rounded" alt="Cinque Terre"></td>
-                    <td>Name of the first novel</td>
-                    <td style="text-align:center">Author</td>
-                    <td style="text-align:center">Chapter</td>
-                    <td style="text-align:center">Converter</td>
+                    <td><img src="@Model[i].Image_link" class="img-rounded" alt="Cinque Terre"></td>
+                    <td>@Model[i].Name</td>
+                    <td style="text-align:center">@Model[i].Author</td>
+                    <td style="text-align:center">@Model[i].Chap_number</td>
+                    <td style="text-align:center">@Model[i].Recommandation</td>
                 </tr>
             }
         </table>
