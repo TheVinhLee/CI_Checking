@@ -28,9 +28,20 @@ namespace novelconvert.Models
 
         public NovelModel GetMaxVoting()
         {
-            NovelModel lnm = new NovelModel();
+            List<NovelModel> Novel_List = AllNovel();
 
-            return lnm;
+            int lMaxIndex = 0;
+            for (int i = 1; i < Novel_List.Count(); i++)
+            {
+                lMaxIndex = (Novel_List[i].Voting > Novel_List[lMaxIndex].Voting) ? i : lMaxIndex;
+            }
+
+            return Novel_List[lMaxIndex];
+        }
+
+        public NovelModel SelectOneNovel(string id)
+        {
+            return null;
         }
 
         public List<NovelModel> AllNovel()
