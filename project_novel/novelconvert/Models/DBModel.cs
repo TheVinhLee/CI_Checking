@@ -16,7 +16,7 @@ namespace novelconvert.Models
 
         public void DBConnection(MySqlConnection conn, string database_name)
         {
-            conn = new MySqlConnection("server=localhost;userid=root;password=123456;database=" + database_name);
+            conn = new MySqlConnection("server=localhost;userid=root;password=;database=" + database_name);
             conn.Open();
             
         }
@@ -47,7 +47,7 @@ namespace novelconvert.Models
         public List<NovelModel> AllNovel()
         {
             string query = "SELECT * FROM `novel_infor` WHERE 1";
-            MySqlConnection conn = new MySqlConnection("server=localhost;userid=root;password=123456;database=novel");
+            MySqlConnection conn = new MySqlConnection("server=localhost;userid=root;password=;database=novel");
 
             MySqlCommand cmd = new MySqlCommand(query, conn);
             conn.Open();
