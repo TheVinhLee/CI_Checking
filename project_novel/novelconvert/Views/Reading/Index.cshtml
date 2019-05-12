@@ -1,0 +1,30 @@
+﻿@model novelconvert.Models.NovelModel
+@{
+    ViewBag.Title = "Reading";
+}
+
+<h2>Reading page @Model.Name</h2>
+<h2>Chapter: @ViewBag.Chapter</h2>
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li class="page-item"><a href="/Reading/?id=@Model.Id&chapter=@ViewBag.Chapter">Previous</a></li>
+    <li class="page-item"><a href="/Reading/?id=@Model.Id&chapter=@ViewBag.Chapter">Next</a></li>
+  </ul>
+</nav>
+
+<p>@Model.Link</p>
+
+<div class="reading-body">
+
+
+</div>
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li class="page-item"><a href="/Reading/?id=@Model.Id&chapter=@ViewBag.Chapter">Previous</a></li>
+    <li class="page-item"><a href="/Reading/?id=@Model.Id&chapter=@ViewBag.Chapter">Next</a></li>
+	<br></br>
+	<br></br>
+	<li class="page-item"><a href="/Reading/?id=@Model.Id&chapter=@ViewBag.Chapter">Rate</a></li>
+  </ul>
+</nav>
+
