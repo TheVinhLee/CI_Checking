@@ -9,18 +9,13 @@ using System.Threading.Tasks;
 namespace novelconvert.Controllers.Tests
 {
     [TestClass()]
-    public class HomeControllerTests
+    public class NovelReadTest
     {
         [TestMethod()]
-        public void IndexTest()
+        public void GetNovelTest()
         {
-            Assert.Fail();
-        }
+            Assert.IsFalse();
 
-        [TestMethod()]
-        public void AboutTest()
-        {
-            Assert.Fail();
         }
     }
 }
