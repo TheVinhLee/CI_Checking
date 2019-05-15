@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FD1406C2-CAE3-406A-99CE-9BDDA341DD86}</ProjectGuid>
+    <ProjectGuid>{B46EC3B4-BE35-4505-813B-648544E36F43}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>novelconvertTests1</RootNamespace>
@@ -56,8 +56,8 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Controllers\AccountControllerTests.cs" />
     <Compile Include="Controllers\HomeControllerTests.cs" />
-    <Compile Include="Controllers\RegisterControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
